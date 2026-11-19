@@ -195,14 +195,14 @@ a:focus-visible {
   letter-spacing: -.087em;
 }
 
-.hero h1 span { display: block; }
 .hero h1 b { color: var(--orange); }
 
 .hero-description {
   max-width: 32ch;
   margin-block: 1.9rem 1.6rem;
   color: var(--muted);
-  font-size: clamp(1.06rem, 1.8vw, 1.28rem);
+  color: color-mix(in srgb, var(--muted) 75%, var(--ink));
+  font-size: clamp(1.125rem, 2vw, 1.4rem);
   line-height: 1.5;
 }
 
@@ -224,7 +224,7 @@ a:focus-visible {
 .primary-link:focus-visible { outline-color: var(--ink); }
 
 .portrait {
-  width: min(100%, 28rem);
+  width: min(100%, 22rem);
   justify-self: end;
 }
 
@@ -462,7 +462,7 @@ a:focus-visible {
 @media (max-width: 38rem) {
   .hero { grid-template-columns: 1fr; }
   .hero h1 { font-size: clamp(4.3rem, 15vw, 6rem); }
-  .portrait { width: min(100%, 24rem); justify-self: start; }
+  .portrait { width: min(100%, 20rem); justify-self: start; }
   .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
