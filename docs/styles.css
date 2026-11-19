@@ -315,7 +315,7 @@ a:focus-visible {
   letter-spacing: -.035em;
 }
 
-.writing {
+.more {
   padding-block: clamp(3.35rem, 7vw, 5.5rem);
   background: var(--pine);
   color: var(--light);
@@ -484,7 +484,7 @@ a:focus-visible {
 
   .article-page { background: white; color: black; }
   .site-header, .skip, .primary-link, .story-mark, .article-page .site-footer { display: none; }
-  .hero, .writing, .about { padding-block: 1rem; }
+  .hero, .more, .about { padding-block: 1rem; }
   .hero h1 { font-size: 4.5rem; }
   .article-content { padding-block: 0; }
 }
