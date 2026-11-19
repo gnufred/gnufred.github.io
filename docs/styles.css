@@ -38,7 +38,7 @@
     --fact-line: #596b5d;
   }
 
-  .credential-icon { filter: invert(1); }
+  .credential-icon, .profile-icon { filter: invert(1); }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -110,6 +110,9 @@ a:focus-visible {
   text-decoration: none;
 }
 
+.site-links a { gap: .45rem; }
+.profile-icon { flex: none; }
+
 .site-links a:hover, .site-footer a:hover { text-decoration: underline; }
 
 .wordmark {
@@ -140,7 +143,7 @@ a:focus-visible {
 }
 
 .article-page .site-links { gap: 0 clamp(.65rem, 3vw, 2.25rem); }
-.article-page .site-bar a { gap: .6rem; }
+.article-page .site-footer a { gap: .6rem; }
 
 .article-page .site-footer {
   border-top: 1px solid var(--line);
@@ -152,12 +155,6 @@ a:focus-visible {
 .home-page .site-footer .site-bar {
   min-height: 5.25rem;
   padding-block: .5rem;
-}
-
-.site-links .github-link {
-  gap: .5rem;
-  padding: 0 .9rem;
-  border: 1px solid var(--line);
 }
 
 /* Homepage */
@@ -472,7 +469,6 @@ a:focus-visible {
 @media (max-width: 28rem) {
   .home-page .site-header .site-bar { column-gap: .65rem; }
   .home-page .site-header .site-links { gap: .65rem; }
-  .site-links .github-link { display: none; }
 }
 
 @media print {
