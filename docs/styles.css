@@ -126,7 +126,7 @@ a:focus-visible {
   width: 16px;
   height: 16px;
   background: currentColor;
-  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALklEQVR42mNgoBAw4pH7T4xaJkpdMPAGMNAyEIkK2NFARAQitlRHlNhoIDIwAAC4dQUWeBwBzQAAAABJRU5ErkJggg==") center no-repeat;
+  mask: url("glider.webp") center no-repeat;
 }
 
 .wordmark::before { color: var(--orange); }
