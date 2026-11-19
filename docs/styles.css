@@ -126,7 +126,7 @@ a:focus-visible {
   width: 16px;
   height: 16px;
   background: currentColor;
-  mask: url("glider.webp") center no-repeat;
+  mask: url("glider.svg") center no-repeat;
 }
 
 .wordmark::before { color: var(--orange); }
