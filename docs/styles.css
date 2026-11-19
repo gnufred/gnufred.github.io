@@ -101,7 +101,7 @@ a:focus-visible {
   gap: clamp(.75rem, 3vw, 2.25rem);
 }
 
-.site-links a, .article-page .site-bar > a:not(.wordmark) {
+.site-links a, .site-footer a {
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
@@ -110,7 +110,7 @@ a:focus-visible {
   text-decoration: none;
 }
 
-.site-links a:hover, .article-page .site-bar > a:hover { text-decoration: underline; }
+.site-links a:hover, .site-footer a:hover { text-decoration: underline; }
 
 .wordmark {
   display: inline-flex;
@@ -147,12 +147,12 @@ a:focus-visible {
   background: var(--sage);
 }
 
+.site-footer .site-bar { justify-content: flex-start; }
+
 .home-page .site-footer .site-bar {
   min-height: 5.25rem;
   padding-block: .5rem;
 }
-
-.footer-name { font-size: .9rem; font-weight: 700; }
 
 .site-links .github-link {
   gap: .5rem;
