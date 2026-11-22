@@ -43,6 +43,89 @@
       </figure>
     </section>
 
+    <section id="projects" class="wrap section-grid projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="section-title">Open-source projects</h2>
+
+      <div>
+        <article class="project" aria-labelledby="kuberange-heading">
+          <div>
+            <h3 id="kuberange-heading">KubeRange</h3>
+            <p class="project-tagline">Practice Kubernetes on a cluster you can rebuild.</p>
+            <p class="project-summary">
+              A disposable lab that provisions eleven Alpine Linux VMs on one workstation with Vagrant, libvirt, and
+              Ansible. Use it to practice etcd recovery, cross-node networking, and persistent storage.
+            </p>
+            <a class="project-link" href="https://github.com/gnufred/kuberange">KubeRange on GitHub</a>
+          </div>
+
+          <figure class="project-example topology" aria-label="KubeRange VM topology">
+            <div class="topology-service">
+              <code class="vm">lb0</code>
+              <div>
+                <p class="topology-role">API load balancer and DNS</p>
+                <p class="topology-detail">HAProxy · Unbound</p>
+              </div>
+            </div>
+            <div class="topology-connection" aria-hidden="true"></div>
+
+            <div class="topology-cluster" role="group" aria-label="Control plane and workers">
+              <p class="topology-role">Control plane</p>
+              <ul class="vm-list" role="list" aria-label="Control plane nodes">
+                <li><code class="vm">cp0</code></li>
+                <li><code class="vm">cp1</code></li>
+                <li><code class="vm">cp2</code></li>
+              </ul>
+              <p class="topology-role">Workers</p>
+              <ul class="vm-list worker-nodes" role="list" aria-label="Worker nodes">
+                <li><code class="vm">wo0</code></li>
+                <li><code class="vm">wo1</code></li>
+                <li><code class="vm">wo2</code></li>
+                <li><code class="vm">wo3</code></li>
+                <li><code class="vm">wo4</code></li>
+                <li><code class="vm">wo5</code></li>
+              </ul>
+            </div>
+
+            <div class="topology-connection" aria-hidden="true"></div>
+            <div class="topology-service">
+              <code class="vm">nf0</code>
+              <p class="topology-role">NFS storage</p>
+            </div>
+          </figure>
+        </article>
+
+        <article class="project" aria-labelledby="logslate-heading">
+          <div>
+            <h3 id="logslate-heading">Logslate</h3>
+            <p class="project-tagline">A Go command-line tool for investigating web traffic.</p>
+            <p class="project-summary">
+              I built Logslate to scan NGINX access logs for attacks on Adobe Magento eCommerce Cloud. It groups
+              suspicious requests by attack type and summarizes bot and crawler traffic.
+            </p>
+            <a class="project-link" href="https://github.com/gnufred/logslate">Logslate on GitHub</a>
+          </div>
+
+          <figure class="project-example log-report" aria-label="Illustrative Logslate report for a 15-minute attack burst">
+            <pre><code><span class="terminal-prompt" aria-hidden="true">$ </span>cat access.log |
+  logslate --report screen \
+  --since '-15 minutes' \
+  --layout threats,attacks</code>
+
+<strong class="report-section">=== [[ Threats ]] ===</strong>
+Ads: 91 (1.5%)
+Bots: 1,146 (18.4%)
+Attacks: 2,803 (44.9%)
+<strong class="report-section">=== [[ Attacks ]] ===</strong>
+SQL inject:   542
+CMD inject:    73
+Dir trav:   1,336
+Cross site:   228
+Leak scan:    624</pre>
+          </figure>
+        </article>
+      </div>
+    </section>
+
     <section id="certifications" class="wrap credentials" aria-labelledby="certifications-heading">
       <h2 id="certifications-heading" class="section-title">Certifications</h2>
       <ul class="credential-list" role="list">

@@ -251,10 +251,124 @@ a:focus-visible {
   mix-blend-mode: multiply;
 }
 
-.credentials {
+.projects, .credentials {
   padding-block: 2.1rem clamp(3.5rem, 7vw, 5.25rem);
   border-top: 1px solid var(--line);
 }
+
+/* Open-source projects */
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem clamp(1.5rem, 3vw, 3rem);
+}
+
+.project + .project {
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.project-tagline {
+  margin-block: .45rem .65rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.project-summary { color: var(--muted); }
+
+.project-link {
+  display: inline-block;
+  margin-top: .25rem;
+  padding-block: .65rem;
+  color: var(--orange);
+  font-weight: 700;
+  text-underline-offset: .16em;
+}
+
+.project-example {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  font: .875rem/1.45 var(--mono);
+}
+
+/* KubeRange topology */
+
+.topology {
+  container-type: inline-size;
+  background: var(--sage);
+}
+
+.topology-service {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .55rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.topology-connection {
+  height: 1.5rem;
+  margin-inline-start: 1.75rem;
+  border-inline-start: 1px solid var(--moss);
+}
+
+.topology-cluster {
+  padding: .55rem;
+  border: 1px dashed var(--moss);
+}
+
+.topology-role { font-weight: 700; }
+.topology-detail { color: var(--muted); }
+
+.vm-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .25rem;
+  margin: .3rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vm-list + .topology-role { margin-top: .55rem; }
+.worker-nodes { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+
+.vm {
+  display: block;
+  padding: .15rem .3rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--moss);
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+}
+
+@container (max-width: 15rem) {
+  .worker-nodes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Logslate terminal report */
+
+.log-report {
+  background: var(--pine);
+  border-color: var(--pine);
+  color: var(--light);
+}
+
+.log-report pre {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.log-report pre, .log-report code { font: inherit; }
+.terminal-prompt, .report-section { color: var(--story-accent); }
+
+/* Certifications */
 
 .credential-list {
   margin: 1.6rem 0 0;
@@ -284,7 +398,8 @@ a:focus-visible {
   text-underline-offset: .16em;
 }
 
-.credential-list a:is(:hover, :focus-visible) {
+.credential-list a:is(:hover, :focus-visible),
+.project-link:is(:hover, :focus-visible) {
   color: var(--orange);
   text-decoration-color: currentColor;
   text-decoration-thickness: .13em;
@@ -347,12 +462,13 @@ a:focus-visible {
   text-decoration: none;
 }
 
-.story-title {
+.story-title, .project h3 {
   font-size: clamp(1.45rem, 3vw, 2.05rem);
   line-height: 1.15;
   letter-spacing: -.035em;
-  text-underline-offset: .16em;
 }
+
+.story-title { text-underline-offset: .16em; }
 
 .story-link:is(:hover, :focus-visible) .story-title { text-decoration: underline; }
 
@@ -441,6 +557,10 @@ a:focus-visible {
   border-top: 1px solid var(--line);
 }
 
+@media (max-width: 60rem) {
+  .projects { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 53rem) {
   .hero { gap: 2rem; }
   .hero h1 { font-size: clamp(4.6rem, 11.8vw, 7rem); }
@@ -449,6 +569,7 @@ a:focus-visible {
 
 @media (max-width: 38rem) {
   .hero { grid-template-columns: 1fr; }
+  .project { grid-template-columns: 1fr; }
   .hero h1 { font-size: clamp(4.3rem, 15vw, 6rem); }
   .portrait {
     width: min(100%, 20rem);
@@ -485,9 +606,10 @@ a:focus-visible {
 
   .article-page { background: white; color: black; }
   .site-header, .skip, .story-mark, .article-page .site-footer { display: none; }
-  .hero, .about, .more { padding-block: 1rem; }
+  .hero, .projects, .about, .more { padding-block: 1rem; }
   .hero h1 { font-size: 4.5rem; }
   .article-content { padding-block: 0; }
   .prose a, .prose a:visited { color: inherit; }
+  .terminal-prompt, .report-section { color: inherit; }
   .credential-list a { text-decoration-color: currentColor; }
 }
