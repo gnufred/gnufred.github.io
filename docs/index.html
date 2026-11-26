@@ -258,32 +258,63 @@ Leak scan:    624</pre>
       </div>
     </section>
 
-    <section id="more" class="more forest-band" aria-labelledby="more-heading">
-      <div class="wrap section-grid">
-        <h2 id="more-heading" class="section-title">More</h2>
-        <div class="stories">
-          <a
-            class="story-link"
-            id="health-hacks"
-            href="health-hacks.html"
-            aria-labelledby="health-title"
-            aria-describedby="health-hacks-description"
-          >
-            <h3 class="story-title" id="health-title">My health hacks</h3>
-            <p class="story-description" id="health-hacks-description">How to rebuild oneself, one habit at a time.</p>
-            <span class="story-mark" aria-hidden="true"></span>
-          </a>
-          <a
-            class="story-link"
-            id="buddhist-vow"
-            href="buddhist-vow.html"
-            aria-labelledby="vow-title"
-            aria-describedby="buddhist-vow-description"
-          >
-            <h3 class="story-title" id="vow-title">My Buddhist vow</h3>
-            <p class="story-description" id="buddhist-vow-description">Because my state of mind affects how I treat you.</p>
-            <span class="story-mark" aria-hidden="true"></span>
-          </a>
+    <section id="books" class="books-band forest-band" aria-labelledby="books-heading">
+      <div id="more" class="wrap section-grid books-layout">
+        <h2 id="books-heading" class="section-title">Books</h2>
+
+        <div class="books-list">
+          <article class="book-entry" aria-labelledby="work-title">
+            <div class="book-art book-art--blue">
+              <img class="book-cover" src="books-assets/the-work-we-pass-on.webp" width="800" height="1280" alt="">
+            </div>
+            <div class="book-copy">
+              <p class="book-meta">
+                <span class="book-category">AI &amp; software</span>
+                <span aria-hidden="true">·</span>
+                <time datetime="PT35M">35 min read</time>
+              </p>
+              <h3 id="work-title">The Work We Pass On</h3>
+              <p class="book-subtitle">Lessons from the No AI Slop Manifesto</p>
+              <p class="book-summary">
+                How the No AI Slop Manifesto came together, and what its authors and fellow practitioners ask of
+                people who use AI to write and build.
+              </p>
+              <a
+                class="book-download"
+                href="books-assets/the-work-we-pass-on.epub"
+                download
+                aria-label="Download EPUB for The Work We Pass On"
+              >
+                Download EPUB
+              </a>
+            </div>
+          </article>
+
+          <article class="book-entry" aria-labelledby="habits-title">
+            <div class="book-art">
+              <img class="book-cover" src="books-assets/the-habits-i-keep.webp" width="800" height="1280" alt="">
+            </div>
+            <div class="book-copy">
+              <p class="book-meta">
+                <span class="book-category">Health &amp; habits</span>
+                <span aria-hidden="true">·</span>
+                <time datetime="PT10M">10 min read</time>
+              </p>
+              <h3 id="habits-title">The habits I keep</h3>
+              <p class="book-subtitle">How I keep my s**t together in the darkest hours</p>
+              <p class="book-summary">
+                Six years of research and daily practice, detailed. All free and easy to apply.
+              </p>
+              <a
+                class="book-download"
+                href="books-assets/the-habits-i-keep.epub"
+                download
+                aria-label="Download EPUB for The habits I keep"
+              >
+                Download EPUB
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -292,6 +323,10 @@ Leak scan:    624</pre>
   <footer class="site-footer">
     <nav class="wrap site-bar" aria-label="Footer navigation">
       <a href="#top">Back to top&nbsp;<span aria-hidden="true">↑</span></a>
+      <ul class="footer-essays" role="list">
+        <li><a id="health-hacks" href="health-hacks.html">My health hacks</a></li>
+        <li><a id="buddhist-vow" href="buddhist-vow.html">My Buddhist vow</a></li>
+      </ul>
     </nav>
   </footer>
 </body>
